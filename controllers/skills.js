@@ -2,7 +2,7 @@
 
 const Skill = require('../models/skill');
 
-module.exports = {index, show}
+module.exports = {index, show, newSkill, addSkill}
 
 function index(req, res) {
     res.render('skills/index', {skills: Skill.getAll()})
@@ -15,4 +15,14 @@ function show(req, res) {
     )
 }
 
+function newSkill(req, res) {
+    res.render('skills/new', {
+      title: 'New Skill'
+    })
+}
+
+function addSkill(req, res) {
+    Skill.addSkill(req.body)
+    res.redirect('/skills')
+}
 

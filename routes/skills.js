@@ -11,8 +11,16 @@ var skillsCtrl = require('../controllers/skills');
 // GET /skills (all skills)
 router.get('/', skillsCtrl.index);
 
+// GET /skills/new
+router.get('/new', skillsCtrl.newSkill)
+
+// POST /todos
+router.post('/', skillsCtrl.addSkill)
+
 // GET /skills/:id (a single skill)
 router.get('/:id', skillsCtrl.show)
+
+
 
 
 
