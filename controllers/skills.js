@@ -2,7 +2,7 @@
 
 const Skill = require('../models/skill');
 
-module.exports = {index, show, newSkill, addSkill}
+module.exports = {index, show, newSkill, addSkill, deleteSkill}
 
 function index(req, res) {
     res.render('skills/index', {skills: Skill.getAll()})
@@ -26,3 +26,7 @@ function addSkill(req, res) {
     res.redirect('/skills')
 }
 
+function deleteSkill(req, res) {
+    Skill.deleteSkill(req.params.id)
+    res.redirect('/skills')
+}

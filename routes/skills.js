@@ -17,6 +17,9 @@ router.get('/new', skillsCtrl.newSkill)
 // POST /todos
 router.post('/', skillsCtrl.addSkill)
 
+// DELETE /todos
+router.delete('/:id', skillsCtrl.deleteSkill)
+
 // GET /skills/:id (a single skill)
 router.get('/:id', skillsCtrl.show)
 
