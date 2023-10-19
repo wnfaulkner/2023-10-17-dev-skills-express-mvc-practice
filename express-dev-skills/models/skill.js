@@ -1,3 +1,5 @@
+// Model
+
 const skills = [
     { id: 1, skill: 'HTML', learned: true },
     { id: 2, skill: 'CSS', learned: true },
